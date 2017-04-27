@@ -1,0 +1,45 @@
+<?php
+/**
+ * User: Ahmad
+ * Project notes
+ * Date: 27.04.2017
+ * Time: 09:23
+ */
+
+namespace notes;
+
+
+class Notes
+{
+
+    const NOTES_FILE = '../notes.json';
+    private $allNotes =[];
+
+
+    function __construct()
+    {
+        if (is_readable(self::NOTES_FILE)){
+            $this->allNotes = json_decode(file_get_contents(self::NOTES_FILE), true);
+        } else {
+            touch(self::NOTES_FILE);
+        }
+    }
+
+    public function getAllNotes()
+    {
+        return $this->allNotes;
+    }
+
+    public function addNote($note)
+    {
+        $this->allNotes[] = $note;
+        $this->writeToNotes();
+    }
+
+    private function writeToNotes()
+    {
+        $file = fopen(self::NOTES_FILE, 'w+');
+        fwrite($file, $this->allNotes);
+    }
+
+}

@@ -6,14 +6,16 @@
  * Time: 10:41
  */
 require_once 'class/Notes.php';
-use \notes\Notes as Notes;
+require_once 'class/Templates.php';
 
-echo 'add note template';
+use \notes\Notes as Notes;
+use \notes\Templates as Templates;
+
+echo Templates::getNoteTemplate();
 $notes = new Notes();
-$newNote = 'first note';
-if(isset($newNote)) {
-    //$note = $_GET['note'];
-    $notes->addNote($newNote);
+if(isset($_POST['newMoIt'])) {
+    $note = $_POST['newMoIt'];
+    $notes->addNote($note);
 }
 $loadedNotes = $notes->getAllNotes();
 foreach ($loadedNotes['notes'] as $loadedNote) {

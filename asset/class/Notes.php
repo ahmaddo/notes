@@ -12,7 +12,7 @@ namespace notes;
 class Notes
 {
 
-    const NOTES_FILE = '../notes.json';
+    const NOTES_FILE = 'notes.json';
     private $allNotes =[];
 
 

@@ -44,8 +44,3 @@ class Notes
     }
 
 }
-
-$d = new Notes();
-$d->addNote('first note');
-$d->addNote('second note');
-print_r($d->getAllNotes());

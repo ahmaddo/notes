@@ -32,14 +32,20 @@ class Notes
 
     public function addNote($note)
     {
-        $this->allNotes[] = $note;
+        $this->allNotes['notes'][] = $note;
         $this->writeToNotes();
     }
 
     private function writeToNotes()
     {
         $file = fopen(self::NOTES_FILE, 'w+');
-        fwrite($file, $this->allNotes);
+        fwrite($file, json_encode($this->allNotes));
+        fclose($file);
     }
 
 }
+
+$d = new Notes();
+$d->addNote('first note');
+$d->addNote('second note');
+print_r($d->getAllNotes());

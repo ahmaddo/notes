@@ -23,6 +23,7 @@ class Notes
         } else {
             touch(self::NOTES_FILE);
         }
+        $this->allNotes['notes'] = [];
     }
 
     public function getAllNotes()

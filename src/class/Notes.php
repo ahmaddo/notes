@@ -22,8 +22,8 @@ class Notes
             $this->allNotes = json_decode(file_get_contents(self::NOTES_FILE), true);
         } else {
             touch(self::NOTES_FILE);
+            $this->allNotes['notes'] = [];
         }
-        $this->allNotes['notes'] = [];
     }
 
     public function getAllNotes()

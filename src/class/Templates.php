@@ -18,10 +18,15 @@ class Templates
         <div>
             <form method="post" action="'.$_SERVER['PHP_SELF'].'" name="notesForm">
                 <label for="">Your new NoIt:</label>
-                <input type="text" autocomplete="off" id="newMoIt" name="newMoIt" autofocus>
+                <input type="text" autocomplete="off" id="newMoIt" name="newMoIt" autofocus style="width: 80%;">
                 <input type="submit" value="Add">
             </form>
         </div>
         ';
+    }
+
+    static public function getNotesList($notes)
+    {
+
     }
 }

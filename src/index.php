@@ -18,7 +18,4 @@ if(isset($_POST['newMoIt'])) {
     $notes->addNote($note);
 }
 $loadedNotes = $notes->getAllNotes();
-foreach ($loadedNotes['notes'] as $loadedNote) {
-    echo $loadedNote;
-    echo "<br />\n";
-}
+echo Templates::getNotesList($loadedNotes);

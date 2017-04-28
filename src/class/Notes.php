@@ -28,7 +28,13 @@ class Notes
 
     public function getAllNotes()
     {
+        $this->sortAllNotesDESC();
         return $this->allNotes;
+    }
+
+    private function sortAllNotesDESC()
+    {
+        krsort($this->allNotes['notes']);
     }
 
     public function addNote($note)

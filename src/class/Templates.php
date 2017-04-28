@@ -25,8 +25,18 @@ class Templates
         ';
     }
 
-    static public function getNotesList($notes)
+    static public function getNotesList($loadedNotes)
     {
+        if (!isset($loadedNotes['notes'])) return null;
+        $notesLis = '
+            <ul>
+        ';
+        foreach ($loadedNotes['notes'] as $loadedNote) {
+            $notesLis .= '<li>' . $loadedNote;
+            $notesLis .= '</li>' ;
+        }
+        $notesLis .= '</ul>';
 
+        return $notesLis;
     }
 }

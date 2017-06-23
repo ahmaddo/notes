@@ -72,11 +72,11 @@ class Templates
 
     static public function getLinkTemplate($link)
     {
-        return '<a href="'.$link.'">'.$link.'</a>';
+        return '<a href="'.$link.'" target="_blank">'.$link.'</a>';
     }
 
     static public function getImageTemplate($link)
     {
-        return '<image src="'.$link.'" target="_blank">';
+        return '<image src="'.$link.'">';
     }
 }

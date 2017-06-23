@@ -39,6 +39,7 @@ class Notes
 
     public function addNote($note)
     {
+        $note['type'] = strtolower($note['type']);
         $this->allNotes['notes'][] = $note;
         $this->writeToNotes();
     }

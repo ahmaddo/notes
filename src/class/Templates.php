@@ -15,17 +15,17 @@ class Templates
     {
         return '
         <div>
-            <form method="post" action="'.$_SERVER['PHP_SELF'].'" name="notesForm">
+            <form method="post" action="'.$_SERVER['PHP_SELF'].'" name="notesForm" accept-charset="utf-8" enctype="multipart/form-data">
                 <label for="">Your new NoIt:</label>
                 <select name="type">
                   <option name="text">Text</option>
                   <option name="paragraph">Paragraph</option>
                   <option name="link">Link</option>
-                  <option name="file">File</option>
                 </select>
                 <input type="text" autocomplete="off" name="content" autofocus style="width: 80%;">
                 <textarea name="paragraphContent" hidden></textarea>
                 <input type="submit" value="Add">
+                <input type="file" name="fileselect[]" multiple="multiple" />
             </form>
         </div>
         ';
@@ -41,8 +41,6 @@ class Templates
                 case 'file':
                     if (exif_imagetype($loadedNote['content'])) {
                         $notesLis .= self::getLi() . self::getImageTemplate($loadedNote['content']) . '</li>' ;
-                    } else {
-                        $notesLis .= self::getLi() . $loadedNote['content'] . '</li>' ;
                     }
                     break;
                 case 'link':
@@ -65,6 +63,7 @@ class Templates
     static public function getHeaders()
     {
         return '
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
              <link rel="stylesheet" type="text/css" href="css/notes.css">
              <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
              <script src="js/notes.js"></script>

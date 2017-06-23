@@ -40,6 +40,11 @@ class Notes
     public function addNote($note)
     {
         $note['type'] = strtolower($note['type']);
+        if ($note['type'] == 'paragraph') {
+            $note['content'] = $note['paragraphContent'];
+        }
+        $note['content'] = htmlspecialchars($note['content']);
+        unset($note['paragraphContent']);
         $this->allNotes['notes'][] = $note;
         $this->writeToNotes();
     }

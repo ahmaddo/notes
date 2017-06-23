@@ -25,7 +25,7 @@ class Templates
                   <option name="file">File</option>
                 </select>
                 <input type="text" autocomplete="off" name="content" autofocus style="width: 80%;">
-                <textarea name="paragraphContent"></textarea>
+                <textarea name="paragraphContent" hidden></textarea>
                 <input type="submit" value="Add">
             </form>
         </div>

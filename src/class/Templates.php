@@ -25,6 +25,7 @@ class Templates
                   <option name="file">File</option>
                 </select>
                 <input type="text" autocomplete="off" name="content" autofocus style="width: 80%;">
+                <textarea name="paragraphContent"></textarea>
                 <input type="submit" value="Add">
             </form>
         </div>
@@ -50,6 +51,18 @@ class Templates
     {
         return '
              <link rel="stylesheet" type="text/css" href="css/notes.css">
+             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+             <script src="js/notes.js"></script>
         ';
+    }
+
+    static public function getLinkTemplate($link)
+    {
+        return '<a href="'.$link.'">'.$link.'</a>';
+    }
+
+    static public function getImageTemplate($link)
+    {
+        return '<image src="'.$link.'">';
     }
 }

@@ -11,8 +11,7 @@ namespace notes;
 
 class Templates
 {
-
-    static public function getNoteTemplate()
+    static public function getFormTemplate()
     {
         return '
         <div>
@@ -40,21 +39,26 @@ class Templates
             switch ($loadedNote['type']):
                 case 'file':
                     if (exif_imagetype($loadedNote['content'])) {
-                        $notesLis .= '<li>' . self::getImageTemplate($loadedNote['content']) . '</li>' ;
+                        $notesLis .= self::getLi() . self::getImageTemplate($loadedNote['content']) . '</li>' ;
                     } else {
-                        $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
+                        $notesLis .= self::getLi() . $loadedNote['content'] . '</li>' ;
                     }
                     break;
                 case 'link':
-                    $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                    $notesLis .= self::getLi() . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
                     break;
                 default:
-                    $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
+                    $notesLis .= self::getLi() . $loadedNote['content'] . '</li>' ;
             endswitch;
         }
         $notesLis .= '</ul>';
 
         return $notesLis;
+    }
+
+    static public function getLi()
+    {
+        return  '<li>';
     }
 
     static public function getHeaders()
@@ -73,6 +77,6 @@ class Templates
 
     static public function getImageTemplate($link)
     {
-        return '<image src="'.$link.'">';
+        return '<image src="'.$link.'" target="_blank">';
     }
 }

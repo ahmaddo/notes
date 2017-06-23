@@ -35,12 +35,22 @@ class Templates
     static public function getNotesList($loadedNotes)
     {
         if (!isset($loadedNotes['notes'])) return null;
-        $notesLis = '
-            <ul>
-        ';
+        $notesLis = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
-            $notesLis .= '<li>' . $loadedNote['content'];
-            $notesLis .= '</li>' ;
+            switch ($loadedNote['type']):
+                case 'file':
+                    if (exif_imagetype($loadedNote['content'])) {
+                        $notesLis .= '<li>' . self::getImageTemplate($loadedNote['content']) . '</li>' ;
+                    } else {
+                        $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
+                    }
+                    break;
+                case 'link':
+                    $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                    break;
+                default:
+                    $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
+            endswitch;
         }
         $notesLis .= '</ul>';
 

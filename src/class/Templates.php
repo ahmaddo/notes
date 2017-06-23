@@ -22,7 +22,6 @@ class Templates
                   <option name="text">Text</option>
                   <option name="paragraph">Paragraph</option>
                   <option name="link">Link</option>
-                  <option name="image">Image</option>
                   <option name="file">File</option>
                 </select>
                 <input type="text" autocomplete="off" name="content" autofocus style="width: 80%;">

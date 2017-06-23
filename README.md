@@ -1,6 +1,7 @@
-# NoIt Notes Simple page:
+# Notes Simple page:
 
-helps you to view and save all you notes in a JSON file to import them later easily.
+very simple tool to view notes and save them as JSON string to import them later easily.
+
 
 # Usage:
-The main order and index.php file 755 permission.
+Make www-data owner for the project and open main file (src/index.php). 

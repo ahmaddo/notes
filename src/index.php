@@ -11,6 +11,7 @@ require_once 'class/Templates.php';
 use \notes\Notes as Notes;
 use \notes\Templates as Templates;
 
+echo Templates::getHeaders();
 echo Templates::getNoteTemplate();
 $notes = new Notes();
 if(isset($_POST['content'])) {

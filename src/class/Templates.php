@@ -23,6 +23,7 @@ class Templates
                   <option name="paragraph">Paragraph</option>
                   <option name="link">Link</option>
                   <option name="image">Image</option>
+                  <option name="file">File</option>
                 </select>
                 <input type="text" autocomplete="off" name="content" autofocus style="width: 80%;">
                 <input type="submit" value="Add">

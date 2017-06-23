@@ -36,6 +36,7 @@ class Templates
         if (!isset($loadedNotes['notes'])) return null;
         $notesLis = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
+            $loadedNote['content'] = nl2br($loadedNote['content']);
             switch ($loadedNote['type']):
                 case 'file':
                     if (exif_imagetype($loadedNote['content'])) {

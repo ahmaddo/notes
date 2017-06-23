@@ -18,7 +18,13 @@ class Templates
         <div>
             <form method="post" action="'.$_SERVER['PHP_SELF'].'" name="notesForm">
                 <label for="">Your new NoIt:</label>
-                <input type="text" autocomplete="off" id="newMoIt" name="newMoIt" autofocus style="width: 80%;">
+                <select name="type">
+                  <option name="text">Text</option>
+                  <option name="paragraph">Paragraph</option>
+                  <option name="link">Link</option>
+                  <option name="image">Image</option>
+                </select>
+                <input type="text" autocomplete="off" name="content" autofocus style="width: 80%;">
                 <input type="submit" value="Add">
             </form>
         </div>
@@ -32,7 +38,7 @@ class Templates
             <ul>
         ';
         foreach ($loadedNotes['notes'] as $loadedNote) {
-            $notesLis .= '<li>' . $loadedNote;
+            $notesLis .= '<li>' . $loadedNote['content'];
             $notesLis .= '</li>' ;
         }
         $notesLis .= '</ul>';

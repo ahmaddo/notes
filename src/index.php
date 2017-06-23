@@ -13,8 +13,9 @@ use \notes\Templates as Templates;
 
 echo Templates::getNoteTemplate();
 $notes = new Notes();
-if(isset($_POST['newMoIt'])) {
-    $note = $_POST['newMoIt'];
+if(isset($_POST['content'])) {
+    var_dump($_POST);
+    $note = $_POST;
     $notes->addNote($note);
 }
 $loadedNotes = $notes->getAllNotes();

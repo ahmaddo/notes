@@ -45,4 +45,11 @@ class Templates
 
         return $notesLis;
     }
+
+    static public function getHeaders()
+    {
+        return '
+             <link rel="stylesheet" type="text/css" href="css/notes.css">
+        ';
+    }
 }

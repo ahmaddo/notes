@@ -41,7 +41,7 @@ class Notes
     public function postData($notes)
     {
         if ($_FILES['fileselect']['size'][0] > 0) {
-            if (!dir(self::UPLOAD_DIR)) {
+            if (!is_dir(self::UPLOAD_DIR)) {
                 mkdir(self::UPLOAD_DIR, 0755);
             }
             $files = $_FILES['fileselect'];

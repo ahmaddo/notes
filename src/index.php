@@ -17,7 +17,7 @@ $notes = new Notes();
 if(isset($_POST['content'])) {
     //var_dump($_POST);
     $note = $_POST;
-    $notes->addNote($note);
+    $notes->postData($note);
 }
 $loadedNotes = $notes->getAllNotes();
 echo Templates::getNotesList($loadedNotes);

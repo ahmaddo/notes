@@ -38,14 +38,14 @@ class Templates
         foreach ($loadedNotes['notes'] as $loadedNote) {
             $loadedNote['content'] = nl2br($loadedNote['content']);
             switch ($loadedNote['type']):
-                case 'file':
+                case 'link':
                     if (exif_imagetype($loadedNote['content'])) {
                         $notesLis .= self::getLi() . self::getImageTemplate($loadedNote['content']) . '</li>' ;
+                        break;
+                    } else {
+                        $notesLis .= self::getLi() . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                        break;
                     }
-                    break;
-                case 'link':
-                    $notesLis .= self::getLi() . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
-                    break;
                 default:
                     $notesLis .= self::getLi() . $loadedNote['content'] . '</li>' ;
             endswitch;

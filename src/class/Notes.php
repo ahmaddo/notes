@@ -38,26 +38,34 @@ class Notes
         krsort($this->allNotes['notes']);
     }
 
+    public function postData($notes)
+    {
+        if ($_FILES['fileselect']['size'][0] > 0) {
+            if (!dir(self::UPLOAD_DIR)) {
+                mkdir(self::UPLOAD_DIR, 0775);
+            }
+            $files = $_FILES['fileselect'];
+            foreach ($files['name'] as $fileNumber => $fileName){
+                $fileNameArray = array_reverse( explode('.', $fileName));
+                $fileExtension = $fileNameArray[0];
+                $tempRandomName = uniqid() . '.' . $fileExtension;
+                $newFileName =  self::UPLOAD_DIR ."/". $tempRandomName;
+                move_uploaded_file($files['tmp_name'][$fileNumber], $newFileName);
+                chmod($newFileName, 0644);
+                $note['content'] = $newFileName;
+                $note['type'] = 'link';
+                $this->addNote($note);
+            }
+        } else {
+            $this->addNote($notes);
+        }
+    }
+
     public function addNote($note)
     {
         $note['type'] = strtolower($note['type']);
         if ($note['type'] == 'paragraph') {
             $note['content'] = $note['paragraphContent'];
-        }
-        if ($_FILES['fileselect']['size'][0] > 0) {
-            if (!dir(self::UPLOAD_DIR)) {
-                mkdir(self::UPLOAD_DIR, 0775);
-            }
-                $files = $_FILES['fileselect'];
-                foreach ($files['name'] as $fileNumber => $fileName){
-                    $fileNameArray = array_reverse( explode('.', $fileName));
-                    $fileExtension = $fileNameArray[0];
-                    $tempRandomName = uniqid() . '.' . $fileExtension;
-                    $newFileName =  self::UPLOAD_DIR ."/". $tempRandomName;
-                    move_uploaded_file($files['tmp_name'][$fileNumber], $newFileName);
-                }
-            $note['content'] = $newFileName;
-            $note['type'] = 'link';
         }
 
         $note['content'] = htmlspecialchars($note['content']);

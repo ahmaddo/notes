@@ -31,4 +31,6 @@ input[type=file] {
 
 textarea[name=paragraphContent] {
     width:100%;
+    min-height: 90px;
+    resize: vertical;
 }

@@ -16,7 +16,6 @@ class Templates
         return '
         <div>
             <form method="post" action="'.$_SERVER['PHP_SELF'].'" name="notesForm" accept-charset="utf-8" enctype="multipart/form-data">
-                <label for="">Your new NoIt:</label>
                 <select name="type">
                   <option name="text">Text</option>
                   <option name="paragraph">Paragraph</option>
@@ -53,16 +52,6 @@ class Templates
         $notesLis .= '</ul>';
 
         return $notesLis;
-    }
-
-    static public function getHeaders()
-    {
-        return '
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-             <link rel="stylesheet" type="text/css" href="css/notes.css">
-             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-             <script src="js/notes.js"></script>
-        ';
     }
 
     static public function getLinkTemplate($link, $innerText = null)

@@ -77,7 +77,7 @@ class Notes
     private function writeToNotes()
     {
         $file = fopen(self::NOTES_FILE, 'w+');
-        fwrite($file, json_encode($this->allNotes));
+        fwrite($file, json_encode($this->allNotes, JSON_PRETTY_PRINT));
         fclose($file);
     }
 

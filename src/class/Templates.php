@@ -38,7 +38,7 @@ class Templates
             $loadedNote['content'] = nl2br($loadedNote['content']);
             switch ($loadedNote['type']):
                 case 'link':
-                    if (exif_imagetype($loadedNote['content'])) {
+                    if (substr($loadedNote['content'], 0, 6) == 'upload' && exif_imagetype($loadedNote['content'])) {
                         $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
                         break;
                     } else {

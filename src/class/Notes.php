@@ -13,6 +13,7 @@ class Notes
 {
 
     const NOTES_FILE = 'notes.json';
+    const UPLOAD_DIR = 'upload';
     private $allNotes =[];
 
 
@@ -43,6 +44,22 @@ class Notes
         if ($note['type'] == 'paragraph') {
             $note['content'] = $note['paragraphContent'];
         }
+        if ($_FILES['fileselect']['size'][0] > 0) {
+            if (!dir(self::UPLOAD_DIR)) {
+                mkdir(self::UPLOAD_DIR, 0644);
+            }
+                $files = $_FILES['fileselect'];
+                foreach ($files['name'] as $fileNumber => $fileName){
+                    $fileNameArray = array_reverse( explode('.', $fileName));
+                    $fileExtension = $fileNameArray[0];
+                    $tempRandomName = uniqid() . '.' . $fileExtension;
+                    $newFileName =  self::UPLOAD_DIR ."/". $tempRandomName;
+                    move_uploaded_file($files['tmp_name'][$fileNumber], $newFileName);
+                }
+            $note['content'] = $newFileName;
+            $note['type'] = 'link';
+        }
+
         $note['content'] = htmlspecialchars($note['content']);
         unset($note['paragraphContent']);
         $this->allNotes['notes'][] = $note;

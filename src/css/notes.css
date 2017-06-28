@@ -22,3 +22,13 @@ ul {
 li:hover {
     background-color: rgba(187, 185, 87, 0.26);
 }
+
+input[type=file] {
+    width: 100%;
+    background-color: rgba(212, 221, 237, 0.36);
+    padding: 10px;
+}
+
+textarea[name=paragraphContent] {
+    width:100%;
+}

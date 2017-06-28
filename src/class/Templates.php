@@ -40,24 +40,19 @@ class Templates
             switch ($loadedNote['type']):
                 case 'link':
                     if (exif_imagetype($loadedNote['content'])) {
-                        $notesLis .= self::getLi() . self::getImageTemplate($loadedNote['content']) . '</li>' ;
+                        $notesLis .= '<li>' . self::getImageTemplate($loadedNote['content']) . '</li>' ;
                         break;
                     } else {
-                        $notesLis .= self::getLi() . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                        $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
                         break;
                     }
                 default:
-                    $notesLis .= self::getLi() . $loadedNote['content'] . '</li>' ;
+                    $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
             endswitch;
         }
         $notesLis .= '</ul>';
 
         return $notesLis;
-    }
-
-    static public function getLi()
-    {
-        return  '<li>';
     }
 
     static public function getHeaders()

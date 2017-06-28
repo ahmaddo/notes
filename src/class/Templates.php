@@ -40,7 +40,7 @@ class Templates
             switch ($loadedNote['type']):
                 case 'link':
                     if (exif_imagetype($loadedNote['content'])) {
-                        $notesLis .= '<li>' . self::getImageTemplate($loadedNote['content']) . '</li>' ;
+                        $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
                         break;
                     } else {
                         $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
@@ -65,9 +65,12 @@ class Templates
         ';
     }
 
-    static public function getLinkTemplate($link)
+    static public function getLinkTemplate($link, $innerText = null)
     {
-        return '<a href="'.$link.'" target="_blank">'.$link.'</a>';
+        if (!$innerText) {
+            return '<a href="'.$link.'" target="_blank">'.$link.'</a>';
+        }
+        return '<a href="'.$link.'" target="_blank">'. $innerText .'</a>';
     }
 
     static public function getImageTemplate($link)

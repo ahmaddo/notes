@@ -3,3 +3,22 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
+img {
+    width: 250px;
+}
+
+li {
+    background-color: rgba(87, 124, 187, 0.26);
+    margin: 2px 0;
+    padding: 4px;
+}
+
+ul {
+    margin: 0 !important;
+    list-style-type: none !important;
+}
+
+li:hover {
+    background-color: rgba(187, 185, 87, 0.26);
+}

@@ -49,7 +49,7 @@ class Notes
                 $fileNameArray = array_reverse( explode('.', $fileName));
                 $fileExtension = $fileNameArray[0];
                 $tempRandomName = uniqid() . '.' . $fileExtension;
-                $newFileName =  self::UPLOAD_DIR ."/". $tempRandomName;
+                $newFileName =  self::UPLOAD_DIR ."/". $fileName;
                 move_uploaded_file($files['tmp_name'][$fileNumber], $newFileName);
                 chmod($newFileName, 0644);
                 $note['content'] = $newFileName;

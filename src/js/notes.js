@@ -11,3 +11,8 @@ $('select[name=type]').click(function(){
         $('textarea[name=paragraphContent]').hide();
     }
 });
+
+$('li').click(function(){
+    document.execCommand("copy");
+    console.log($(this).text());
+});

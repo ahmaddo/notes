@@ -26,8 +26,10 @@
     }
     $loadedNotes = $notes->getAllNotes();
     echo Templates::getNotesList($loadedNotes);
-?>
 
+    echo Templates::getAdsTemplate();
+    echo Templates::getAdsTemplate(1);
+?>
 <link rel="stylesheet" type="text/css" href="css/notes.css">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/notes.js"></script>

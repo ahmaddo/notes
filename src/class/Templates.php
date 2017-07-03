@@ -36,18 +36,17 @@ class Templates
         $notesLis = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
             $loadedNote['content'] = nl2br($loadedNote['content']);
-            switch ($loadedNote['type']):
-                case 'link':
-                    if (substr($loadedNote['content'], 0, 6) == 'upload' && exif_imagetype($loadedNote['content'])) {
-                        $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
-                        break;
-                    } else {
-                        $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
-                        break;
-                    }
-                default:
-                    $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
-            endswitch;
+            if (($loadedNote['type']) == 'link') {
+                if (substr($loadedNote['content'], 0, 6) == 'upload' && exif_imagetype($loadedNote['content'])) {
+                    $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
+                    break;
+                } else {
+                    $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                    break;
+                }
+            }else{
+                $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
+            }
         }
         $notesLis .= '</ul>';
 

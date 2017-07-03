@@ -67,7 +67,11 @@ class Notes
         if ($note['type'] == 'paragraph') {
             $note['content'] = $note['paragraphContent'];
         }
-
+        $firstFourLetters =  substr($note['content'], 0,4);
+        if (
+            in_array($firstFourLetters,  ['http',  'ftp:', 'www.'])) {
+            $note['type'] = 'link';
+        }
         $note['content'] = htmlspecialchars($note['content']);
         unset($note['paragraphContent']);
         $this->allNotes['notes'][] = $note;

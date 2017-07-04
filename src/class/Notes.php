@@ -54,8 +54,6 @@ class Notes
                 chmod($newFileName, 0644);
                 $note['content'] = $newFileName;
                 $note['type'] = 'link';
-                $note['post_date'] = date('Y-m-d H:i:s');
-                $note['ip_address'] = $_SERVER['REMOTE_ADDR'];
                 $this->addNote($note);
             }
         } else {
@@ -65,6 +63,9 @@ class Notes
 
     public function addNote($note)
     {
+        $note['post_date'] = date('Y-m-d H:i:s');
+        $note['ip_address'] = $_SERVER['REMOTE_ADDR'];
+
         $note['type'] = strtolower($note['type']);
         if ($note['type'] == 'paragraph') {
             $note['content'] = $note['paragraphContent'];

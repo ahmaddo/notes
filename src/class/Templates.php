@@ -39,10 +39,8 @@ class Templates
             if (($loadedNote['type']) == 'link') {
                 if (substr($loadedNote['content'], 0, 6) == 'upload' && exif_imagetype($loadedNote['content'])) {
                     $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
-                    break;
                 } else {
                     $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
-                    break;
                 }
             }else{
                 $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;

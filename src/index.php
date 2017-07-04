@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/notes.css">
     <title>Notes</title>
 </head>
 <body>
@@ -31,7 +32,6 @@
     echo Templates::getAdsTemplate();
     echo Templates::getAdsTemplate(1);
 ?>
-<link rel="stylesheet" type="text/css" href="css/notes.css">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/notes.js"></script>
 </body>

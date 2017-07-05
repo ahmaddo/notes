@@ -33,22 +33,34 @@ class Templates
     static public function getNotesList($loadedNotes)
     {
         if (!isset($loadedNotes['notes'])) return null;
-        $notesLis = '<ul>';
+        $notesList = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
             $loadedNote['content'] = nl2br($loadedNote['content']);
             if (($loadedNote['type']) == 'link') {
-                if (substr($loadedNote['content'], 0, 6) == 'upload' && exif_imagetype($loadedNote['content'])) {
-                    $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
-                } else {
-                    $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
-                }
+                $notesList .= self::handelLinks($loadedNote);
             }else{
-                $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
+                $notesList .= '<li>' . $loadedNote['content'] . '</li>' ;
             }
         }
-        $notesLis .= '</ul>';
+        $notesList .= '</ul>';
 
-        return $notesLis;
+        return $notesList;
+    }
+
+    static private function handelLinks($loadedNote)
+    {
+        if (substr($loadedNote['content'], 0, 6) == 'upload' ) {
+            if (file_exists($loadedNote['content'])){
+                if (exif_imagetype($loadedNote['content'])) {
+                    return '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
+                } else {
+                    return'<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                }
+            }
+        } else {
+            return'<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+        }
+        return '';
     }
 
     static public function getLinkTemplate($link, $innerText = null)

@@ -41,23 +41,40 @@ class Notes
     public function postData($notes)
     {
         if ($_FILES['fileselect']['size'][0] > 0) {
-            if (!is_dir(self::UPLOAD_DIR)) {
-                mkdir(self::UPLOAD_DIR, 0755);
-            }
-            $files = $_FILES['fileselect'];
-            foreach ($files['name'] as $fileNumber => $fileName){
-                $fileNameArray = array_reverse( explode('.', $fileName));
-                $fileExtension = $fileNameArray[0];
-                $tempRandomName = uniqid() . '.' . $fileExtension;
-                $newFileName =  self::UPLOAD_DIR ."/". $fileName;
-                move_uploaded_file($files['tmp_name'][$fileNumber], $newFileName);
-                chmod($newFileName, 0644);
-                $note['content'] = $newFileName;
-                $note['type'] = 'link';
-                $this->addNote($note);
-            }
+            $this->uploadFile();
         } else {
             $this->addNote($notes);
+        }
+    }
+
+    private function uploadFile()
+    {
+        if (!is_dir(self::UPLOAD_DIR)) {
+            $this->makeDir();
+        }
+        $files = $_FILES['fileselect'];
+        foreach ($files['name'] as $fileNumber => $fileName){
+            $fileName =  self::UPLOAD_DIR ."/". $fileName;
+            move_uploaded_file($files['tmp_name'][$fileNumber], $fileName);
+            $this->givePermission($fileName);
+            $note['content'] = $fileName;
+            $note['type'] = 'link';
+            $this->addNote($note);
+        }
+    }
+
+    private function makeDir()
+    {
+        mkdir(self::UPLOAD_DIR, 0755);
+    }
+
+    private function givePermission($fileName)
+    {
+        $mime = mime_content_type ($fileName);
+        if (strpos($mime,'application')){
+            chmod($fileName, 0444);
+        } else {
+            chmod($fileName, 0644);
         }
     }
 

@@ -35,12 +35,14 @@ class Templates
         if (!isset($loadedNotes['notes'])) return null;
         $notesList = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
-            $loadedNote['content'] = nl2br($loadedNote['content']);
-            if (($loadedNote['type']) == 'link') {
-                $notesList .= self::handelLinks($loadedNote);
-            }else{
-                $notesList .= '<li>' . $loadedNote['content'] . '</li>' ;
-            }
+            echo '<li name="'. $loadedNote['uuid'] .'">';
+                $loadedNote['content'] = nl2br($loadedNote['content']);
+                if (($loadedNote['type']) == 'link') {
+                    $notesList .= self::handelLinks($loadedNote);
+                }else{
+                    $notesList .= $loadedNote['content']  ;
+                }
+            echo '</li>';
         }
         $notesList .= '</ul>';
 
@@ -52,13 +54,13 @@ class Templates
         if (substr($loadedNote['content'], 0, 6) == 'upload' ) {
             if (file_exists($loadedNote['content'])){
                 if (exif_imagetype($loadedNote['content'])) {
-                    return '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
+                    return  self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content'])) ;
                 } else {
-                    return'<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+                    return self::getLinkTemplate($loadedNote['content']) ;
                 }
             }
         } else {
-            return'<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
+            return self::getLinkTemplate($loadedNote['content'])  ;
         }
         return '';
     }

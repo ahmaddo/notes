@@ -39,7 +39,7 @@ textarea[name=paragraphContent] {
     resize: vertical;
 }
 
-#content{
+#notes-list{
     display: flex;
 }
 

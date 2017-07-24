@@ -23,8 +23,8 @@
         <?php echo Templates::getFormTemplate(); ?>
     </div>
     <div id="notes-container">
-
-        <?php
+        <div id="notes-list">
+            <?php
             $notes = new Notes();
             if(isset($_POST['content'])) {
                 //var_dump($_POST);
@@ -36,9 +36,12 @@
 
             echo Templates::getAdsTemplate();
             echo Templates::getAdsTemplate(1);
-        ?>
-        <div id="right-sidebar">
-            <?php echo Templates::getAdsTemplate('right-side-bar')?>
+            ?>
+        </div>
+        <div id="sidebar">
+            <div id="right-sidebar">
+                <?php echo Templates::getAdsTemplate('right-side-bar')?>
+            </div>
         </div>
     </div>
 </div>

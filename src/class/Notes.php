@@ -83,6 +83,7 @@ class Notes
         $note['post_date'] = date('Y-m-d H:i:s');
         $note['ip_address'] = $_SERVER['REMOTE_ADDR'];
 
+        $note['uuid'] = $this->getRandomId();
         $note['type'] = strtolower($note['type']);
         if ($note['type'] == 'paragraph') {
             $note['content'] = $note['paragraphContent'];
@@ -96,6 +97,12 @@ class Notes
         unset($note['paragraphContent']);
         $this->allNotes['notes'][] = $note;
         $this->writeToNotes();
+    }
+
+    private function getRandomId()
+    {
+        $bytes = random_bytes(5);
+        return bin2hex($bytes);
     }
 
     private function writeToNotes()

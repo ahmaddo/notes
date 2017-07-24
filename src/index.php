@@ -33,10 +33,13 @@
             }
             $loadedNotes = $notes->getAllNotes();
             echo Templates::getNotesList($loadedNotes);
-
-            echo Templates::getAdsTemplate();
-            echo Templates::getAdsTemplate(1);
             ?>
+            <div>
+                <?php
+                echo Templates::getAdsTemplate();
+                echo Templates::getAdsTemplate(1);
+                ?>
+            </div>
         </div>
         <div id="sidebar">
             <div id="right-sidebar">

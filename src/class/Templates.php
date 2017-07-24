@@ -35,13 +35,19 @@ class Templates
         if (!isset($loadedNotes['notes'])) return null;
         $notesList = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
-            echo '<li name="'. $loadedNote['uuid'] .'">';
-                $loadedNote['content'] = nl2br($loadedNote['content']);
-                if (($loadedNote['type']) == 'link') {
-                    $notesList .= self::handelLinks($loadedNote);
-                }else{
-                    $notesList .= $loadedNote['content']  ;
-                }
+            if (isset($loadedNote['uuid'])) {
+                echo '<li name="'. $loadedNote['uuid'] .'">';
+            } else {
+                echo '<li>';
+            }
+
+            $loadedNote['content'] = nl2br($loadedNote['content']);
+            if (($loadedNote['type']) == 'link') {
+                $notesList .= self::handelLinks($loadedNote);
+            }else{
+                $notesList .= $loadedNote['content']  ;
+            }
+
             echo '</li>';
         }
         $notesList .= '</ul>';

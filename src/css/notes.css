@@ -29,7 +29,8 @@ li:hover {
 input[type=file] {
     width: 100%;
     background-color: rgba(212, 221, 237, 0.36);
-    padding: 10px;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 textarea[name=paragraphContent] {
@@ -47,4 +48,12 @@ textarea[name=paragraphContent] {
     width: 18%;
     margin-left: 15px;
     margin-top: 18px;
+}
+
+form {
+    margin-left: 18px;
+}
+
+input, select {
+    height: 30px;
 }

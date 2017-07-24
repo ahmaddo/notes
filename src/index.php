@@ -11,7 +11,7 @@
     <title>Notes</title>
 </head>
 <body>
-<div>
+<div id="content">
     <?php
         require_once 'class/Notes.php';
         require_once 'class/Templates.php';

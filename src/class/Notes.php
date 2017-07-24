@@ -101,8 +101,10 @@ class Notes
 
     private function getRandomId()
     {
-        $bytes = random_bytes(5);
-        return bin2hex($bytes);
+        return uniqid();
+        // fot php 7
+        //$bytes = random_bytes(5);
+        //return bin2hex($bytes);
     }
 
     private function writeToNotes()

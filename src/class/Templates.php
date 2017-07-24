@@ -36,9 +36,9 @@ class Templates
         $notesList = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
             if (isset($loadedNote['uuid'])) {
-                echo '<li name="'. $loadedNote['uuid'] .'">';
+                $notesList .= '<li name="'. $loadedNote['uuid'] .'">';
             } else {
-                echo '<li>';
+                $notesList .= '<li>';
             }
 
             $loadedNote['content'] = nl2br($loadedNote['content']);

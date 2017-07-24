@@ -11,27 +11,37 @@
     <title>Notes</title>
 </head>
 <body>
+<div>
+    <?php
+        require_once 'class/Notes.php';
+        require_once 'class/Templates.php';
 
-<?php
-    require_once 'class/Notes.php';
-    require_once 'class/Templates.php';
+        use \notes\Notes as Notes;
+        use \notes\Templates as Templates;
+    ?>
+    <div>
+        <?php echo Templates::getFormTemplate(); ?>
+    </div>
+    <div id="notes-container">
 
-    use \notes\Notes as Notes;
-    use \notes\Templates as Templates;
+        <?php
+            $notes = new Notes();
+            if(isset($_POST['content'])) {
+                //var_dump($_POST);
+                $note = $_POST;
+                $notes->postData($note);
+            }
+            $loadedNotes = $notes->getAllNotes();
+            echo Templates::getNotesList($loadedNotes);
 
-    echo Templates::getFormTemplate();
-    $notes = new Notes();
-    if(isset($_POST['content'])) {
-        //var_dump($_POST);
-        $note = $_POST;
-        $notes->postData($note);
-    }
-    $loadedNotes = $notes->getAllNotes();
-    echo Templates::getNotesList($loadedNotes);
-
-    echo Templates::getAdsTemplate();
-    echo Templates::getAdsTemplate(1);
-?>
+            echo Templates::getAdsTemplate();
+            echo Templates::getAdsTemplate(1);
+        ?>
+    </div>
+    <div id="right-sidebar">
+        <?php echo Templates::getAdsTemplate('right-side-bar')?>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/notes.js"></script>
 </body>

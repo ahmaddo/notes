@@ -99,6 +99,17 @@ class Templates
                  data-ad-format="auto"></ins>
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>',
+
+            'right-side-bar' => '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- notes-right-sidebar -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5424113881121819"
+                     data-ad-slot="1358279323"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
             </script>'
         ];
 

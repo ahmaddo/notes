@@ -11,7 +11,7 @@
     <title>Notes</title>
 </head>
 <body>
-<div id="content">
+<div>
     <?php
         require_once 'class/Notes.php';
         require_once 'class/Templates.php';
@@ -37,9 +37,9 @@
             echo Templates::getAdsTemplate();
             echo Templates::getAdsTemplate(1);
         ?>
-    </div>
-    <div id="right-sidebar">
-        <?php echo Templates::getAdsTemplate('right-side-bar')?>
+        <div id="right-sidebar">
+            <?php echo Templates::getAdsTemplate('right-side-bar')?>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

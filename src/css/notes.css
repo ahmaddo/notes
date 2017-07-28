@@ -46,6 +46,11 @@ textarea[name=paragraphContent] {
     display: flex;
 }
 
+#sidebar {
+    width:20%;
+    height: 100%;
+}
+
 #right-sidebar {
     height: auto;
     width: 18%;

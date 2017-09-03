@@ -13,6 +13,7 @@ li {
     margin: 2px 0;
     padding: 10px 20px;
     overflow-wrap: break-word;
+
 }
 
 ul {
@@ -54,6 +55,36 @@ textarea[name=paragraphContent] {
 #right-sidebar {
     height: 100%;
     width: 100%;
+    margin-left: 15px;
+    margin-top: 18px;
+}
+
+form {
+    margin-left: 18px;
+}
+
+input, select {
+    height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #notes-list {
+        width: 100%;
+    }
+}
+
+#notes-container{
+    display: flex;
+}
+
+#sidebar {
+    width:20%;
+    height: 100%;
+}
+
+#right-sidebar {
+    height: auto;
+    width: 18%;
     margin-left: 15px;
     margin-top: 18px;
 }

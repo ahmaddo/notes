@@ -41,37 +41,70 @@ class Notes
     public function postData($notes)
     {
         if ($_FILES['fileselect']['size'][0] > 0) {
-            if (!is_dir(self::UPLOAD_DIR)) {
-                mkdir(self::UPLOAD_DIR, 0755);
-            }
-            $files = $_FILES['fileselect'];
-            foreach ($files['name'] as $fileNumber => $fileName){
-                $fileNameArray = array_reverse( explode('.', $fileName));
-                $fileExtension = $fileNameArray[0];
-                $tempRandomName = uniqid() . '.' . $fileExtension;
-                $newFileName =  self::UPLOAD_DIR ."/". $tempRandomName;
-                move_uploaded_file($files['tmp_name'][$fileNumber], $newFileName);
-                chmod($newFileName, 0644);
-                $note['content'] = $newFileName;
-                $note['type'] = 'link';
-                $this->addNote($note);
-            }
+            $this->uploadFile();
         } else {
             $this->addNote($notes);
         }
     }
 
+    private function uploadFile()
+    {
+        if (!is_dir(self::UPLOAD_DIR)) {
+            $this->makeDir();
+        }
+        $files = $_FILES['fileselect'];
+        foreach ($files['name'] as $fileNumber => $fileName){
+            $fileName =  self::UPLOAD_DIR ."/". $fileName;
+            move_uploaded_file($files['tmp_name'][$fileNumber], $fileName);
+            $this->givePermission($fileName);
+            $note['content'] = $fileName;
+            $note['type'] = 'link';
+            $this->addNote($note);
+        }
+    }
+
+    private function makeDir()
+    {
+        mkdir(self::UPLOAD_DIR, 0755);
+    }
+
+    private function givePermission($fileName)
+    {
+        $mime = mime_content_type ($fileName);
+        if (strpos($mime,'application')){
+            chmod($fileName, 0444);
+        } else {
+            chmod($fileName, 0644);
+        }
+    }
+
     public function addNote($note)
     {
+        $note['post_date'] = date('Y-m-d H:i:s');
+        $note['ip_address'] = $_SERVER['REMOTE_ADDR'];
+
+        $note['uuid'] = $this->getRandomId();
         $note['type'] = strtolower($note['type']);
         if ($note['type'] == 'paragraph') {
             $note['content'] = $note['paragraphContent'];
         }
-
+        $firstFourLetters =  substr($note['content'], 0,4);
+        if (
+            in_array($firstFourLetters,  ['http',  'ftp:', 'www.'])) {
+            $note['type'] = 'link';
+        }
         $note['content'] = htmlspecialchars($note['content']);
         unset($note['paragraphContent']);
         $this->allNotes['notes'][] = $note;
         $this->writeToNotes();
+    }
+
+    private function getRandomId()
+    {
+        return uniqid();
+        // fot php 7
+        //$bytes = random_bytes(5);
+        //return bin2hex($bytes);
     }
 
     private function writeToNotes()

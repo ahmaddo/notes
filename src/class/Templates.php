@@ -33,25 +33,42 @@ class Templates
     static public function getNotesList($loadedNotes)
     {
         if (!isset($loadedNotes['notes'])) return null;
-        $notesLis = '<ul>';
+        $notesList = '<ul>';
         foreach ($loadedNotes['notes'] as $loadedNote) {
-            $loadedNote['content'] = nl2br($loadedNote['content']);
-            switch ($loadedNote['type']):
-                case 'link':
-                    if (substr($loadedNote['content'], 0, 6) == 'upload' && exif_imagetype($loadedNote['content'])) {
-                        $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content']))  . '</li>' ;
-                        break;
-                    } else {
-                        $notesLis .= '<li>' . self::getLinkTemplate($loadedNote['content']) . '</li>' ;
-                        break;
-                    }
-                default:
-                    $notesLis .= '<li>' . $loadedNote['content'] . '</li>' ;
-            endswitch;
-        }
-        $notesLis .= '</ul>';
+            if (isset($loadedNote['uuid'])) {
+                $notesList .= '<li name="'. $loadedNote['uuid'] .'">';
+            } else {
+                $notesList .= '<li>';
+            }
 
-        return $notesLis;
+            $loadedNote['content'] = nl2br($loadedNote['content']);
+            if (($loadedNote['type']) == 'link') {
+                $notesList .= self::handelLinks($loadedNote);
+            }else{
+                $notesList .= $loadedNote['content']  ;
+            }
+
+            echo '</li>';
+        }
+        $notesList .= '</ul>';
+
+        return $notesList;
+    }
+
+    static private function handelLinks($loadedNote)
+    {
+        if (substr($loadedNote['content'], 0, 6) == 'upload' ) {
+            if (file_exists($loadedNote['content'])){
+                if (exif_imagetype($loadedNote['content'])) {
+                    return  self::getLinkTemplate($loadedNote['content'], self::getImageTemplate($loadedNote['content'])) ;
+                } else {
+                    return self::getLinkTemplate($loadedNote['content']) ;
+                }
+            }
+        } else {
+            return self::getLinkTemplate($loadedNote['content'])  ;
+        }
+        return '';
     }
 
     static public function getLinkTemplate($link, $innerText = null)
@@ -65,5 +82,45 @@ class Templates
     static public function getImageTemplate($link)
     {
         return '<image src="'.$link.'">';
+    }
+
+    static public function getAdsTemplate($nr = 0)
+    {
+        $ads = [
+            '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- notes -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5424113881121819"
+                 data-ad-slot="4545244281"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>',
+
+            '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- notes footer -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5424113881121819"
+                 data-ad-slot="7359109885"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>',
+
+            'right-side-bar' => '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- notes-right-sidebar -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5424113881121819"
+                     data-ad-slot="1358279323"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>'
+        ];
+
+        return $ads[$nr];
     }
 }

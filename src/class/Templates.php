@@ -118,6 +118,17 @@ class Templates
                      data-ad-format="auto"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>',
+
+            'Rojava-sidebar-1' => '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Rojava-sidebar-1 -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5424113881121819"
+                     data-ad-slot="2327603840"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
             </script>'
         ];
 

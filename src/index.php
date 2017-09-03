@@ -44,6 +44,7 @@
         <div id="sidebar">
             <div id="right-sidebar">
                 <?php echo Templates::getAdsTemplate('right-side-bar')?>
+                <?php echo Templates::getAdsTemplate('Rojava-sidebar-1')?>
             </div>
         </div>
     </div>

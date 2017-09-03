@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd13f23e-c865-47e1-ab78-a07bb563159a" name="Default" comment="">
+    <list default="true" id="dd13f23e-c865-47e1-ab78-a07bb563159a" name="Default" comment="gitionre: uplaoad">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/notes.css" afterPath="$PROJECT_DIR$/src/css/notes.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.php" afterPath="$PROJECT_DIR$/src/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,21 +14,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.php">
+      <file leaf-file-name="notes.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/css/notes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="270">
+              <caret line="86" column="14" lean-forward="false" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notes.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/css/notes.css">
+      <file leaf-file-name="Templates.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/class/Templates.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="-781">
+              <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,13 +56,12 @@
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>notes-container</find>
-      <find>li&gt;</find>
-      <find>from</find>
-      <find>conta</find>
-    </findStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,12 +75,14 @@
         <option value="$PROJECT_DIR$/asset/index.php" />
         <option value="$PROJECT_DIR$/asset/class/Notes.php" />
         <option value="$PROJECT_DIR$/asset/class/Templates.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/class/Notes.php" />
         <option value="$PROJECT_DIR$/src/notes.json" />
         <option value="$PROJECT_DIR$/src/js/notes.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/class/Templates.php" />
-        <option value="$PROJECT_DIR$/src/class/Notes.php" />
         <option value="$PROJECT_DIR$/src/index.php" />
+        <option value="$PROJECT_DIR$/src/class/Templates.php" />
+        <option value="$PROJECT_DIR$/dycf.html" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/css/notes.css" />
       </list>
     </option>
@@ -83,15 +103,13 @@
       </server>
       <server host="noit.dev" id="f9b40235-08b4-4306-af74-6572dc1903e4" name="noit.dev" />
       <server host="notes.dev" id="46e8b965-897c-4799-a230-e935c999332c" name="notes.dev" />
-      <server host="PhpStorm 2017.1.4" id="205e0685-ccb0-4ef2-8296-f60c5c41446a" name="PhpStorm 2017.1.4" port="63342" />
-      <server host="PhpStorm 2017.1.4" id="d42e35aa-e79c-4626-a289-d07b391b912d" name="PhpStorm 2017.1.4 (1)" port="63343" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="106" />
-    <option name="y" value="344" />
-    <option name="width" value="1874" />
+    <option name="x" value="57" />
+    <option name="y" value="-8" />
+    <option name="width" value="1871" />
     <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
@@ -109,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,6 +156,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,17 +164,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\N2GO-49\Documents\GitHub\notes\src\upload" />
-      <recent name="C:\Users\N2GO-49\Documents\GitHub\notes\src\media" />
-      <recent name="C:\Users\N2GO-49\Documents\GitHub\notes\src" />
       <recent name="C:\Users\N2GO-49\Documents\Gitlab\notes\asset" />
       <recent name="C:\Users\N2GO-49\Documents\Gitlab\notes\asset\class" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\N2GO-49\Documents\GitHub\notes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,17 +266,9 @@
       <workItem from="1493281386187" duration="4130000" />
       <workItem from="1493294989121" duration="940000" />
       <workItem from="1493367237087" duration="486000" />
-      <workItem from="1498676772371" duration="8667000" />
-      <workItem from="1498812797564" duration="463000" />
-      <workItem from="1498827111254" duration="394000" />
-      <workItem from="1499090675823" duration="888000" />
-      <workItem from="1499162080291" duration="1475000" />
-      <workItem from="1499177281906" duration="3071000" />
-      <workItem from="1499242859990" duration="2449000" />
-      <workItem from="1499261726160" duration="22000" />
-      <workItem from="1500894913595" duration="3822000" />
-      <workItem from="1500898902977" duration="828000" />
-      <workItem from="1500901031782" duration="379000" />
+      <workItem from="1498676772371" duration="9959000" />
+      <workItem from="1499011449917" duration="1968000" />
+      <workItem from="1504441805181" duration="1414000" />
     </task>
     <task id="LOCAL-00001" summary="Notes: folder permission.">
       <created>1498676818552</created>
@@ -349,193 +354,38 @@
       <option name="project" value="LOCAL" />
       <updated>1498686055683</updated>
     </task>
-    <task id="LOCAL-00013" summary="JS: auto-copy selected text.">
-      <created>1498812931062</created>
+    <task id="LOCAL-00013" summary="Template: fix checking links extension.">
+      <created>1498687882546</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1498812931062</updated>
+      <updated>1498687882546</updated>
     </task>
-    <task id="LOCAL-00014" summary="Templates: Ads">
-      <created>1498827488363</created>
+    <task id="LOCAL-00014" summary="css: ads placing">
+      <created>1504441962106</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1498827488363</updated>
+      <updated>1504441962106</updated>
     </task>
-    <task id="LOCAL-00015" summary="Notes: auto link type changing.">
-      <created>1499091434529</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1499091434529</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Templates: switch statement replaced with if.">
-      <created>1499091474829</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1499091474829</updated>
-    </task>
-    <task id="LOCAL-00017" summary="CSS: images sized.">
-      <created>1499178130035</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1499178130035</updated>
-    </task>
-    <task id="LOCAL-00018" summary="CSS: images resized.">
-      <created>1499178449465</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1499178449465</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Templates: break removed.">
-      <created>1499179130442</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1499179130442</updated>
-    </task>
-    <task id="LOCAL-00020" summary="page icon added">
-      <created>1499179241625</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1499179241625</updated>
-    </task>
-    <task id="LOCAL-00021" summary="page favicon added">
-      <created>1499179713743</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1499179713743</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Notes: date and ip address.">
-      <created>1499179950282</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1499179950282</updated>
-    </task>
-    <task id="LOCAL-00023" summary="CSS: link preferred.">
-      <created>1499180043425</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1499180043425</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Notes's time and ip.">
-      <created>1499180198786</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1499180198786</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Template: unlist deleted files.">
-      <created>1499243804322</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1499243804322</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Notes: chmod -x for application script files.">
-      <created>1499245237458</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1499245237458</updated>
-    </task>
-    <task id="LOCAL-00027" summary="right-sidebar with ads">
-      <created>1500896094506</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1500896094506</updated>
-    </task>
-    <task id="LOCAL-00028" summary="content display style.">
-      <created>1500896304288</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1500896304288</updated>
-    </task>
-    <task id="LOCAL-00029" summary="content display style.">
-      <created>1500896481785</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1500896481785</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Random UUID generated for new added notes.">
-      <created>1500896924553</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1500896924553</updated>
-    </task>
-    <task id="LOCAL-00031" summary="UUID set as list item's name.">
-      <created>1500897297409</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1500897297409</updated>
-    </task>
-    <task id="LOCAL-00032" summary="fixing notes with no uuids">
-      <created>1500897547184</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1500897547184</updated>
-    </task>
-    <task id="LOCAL-00033" summary="list tag fix">
-      <created>1500897886017</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1500897886017</updated>
-    </task>
-    <task id="LOCAL-00034" summary="random_byte exchanged with uniqueid">
-      <created>1500898654168</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1500898654168</updated>
-    </task>
-    <task id="LOCAL-00035" summary="inputs styled.">
-      <created>1500899956788</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1500899956788</updated>
-    </task>
-    <task id="LOCAL-00036" summary="sidebar div">
-      <created>1500901180493</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1500901180493</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29669000" />
+    <option name="totallyTimeSpent" value="20552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="57" y="-8" width="1871" height="1096" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1273429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11871894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25833333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39791667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26145834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39875388" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -554,32 +404,21 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Notes: folder permission." />
+    <MESSAGE value="Multiple files upload" />
+    <MESSAGE value="gitionre: uplaoad folder and notes.json ignored" />
+    <MESSAGE value="gitionre: uplaoad" />
+    <MESSAGE value="upload folder permissions" />
+    <MESSAGE value="Notes: dir check" />
+    <MESSAGE value="Notes: JSON_PRETTY_PRINT" />
+    <MESSAGE value="Template: non used coe removed" />
+    <MESSAGE value="Templates: image linked with image file." />
+    <MESSAGE value="CSS: textarea width" />
     <MESSAGE value="JS: textarea show and hide js script." />
     <MESSAGE value="html template initialized." />
-    <MESSAGE value="JS: auto-copy selected text." />
-    <MESSAGE value="Templates: Ads" />
-    <MESSAGE value="Notes: auto link type changing." />
-    <MESSAGE value="Templates: switch statement replaced with if." />
-    <MESSAGE value="CSS: images sized." />
-    <MESSAGE value="CSS: images resized." />
-    <MESSAGE value="Templates: break removed." />
-    <MESSAGE value="page icon added" />
-    <MESSAGE value="page favicon added" />
-    <MESSAGE value="Notes: date and ip address." />
-    <MESSAGE value="CSS: link preferred." />
-    <MESSAGE value="Notes's time and ip." />
-    <MESSAGE value="Template: unlist deleted files." />
-    <MESSAGE value="Notes: chmod -x for application script files." />
-    <MESSAGE value="right-sidebar with ads" />
-    <MESSAGE value="content display style." />
-    <MESSAGE value="Random UUID generated for new added notes." />
-    <MESSAGE value="UUID set as list item's name." />
-    <MESSAGE value="fixing notes with no uuids" />
-    <MESSAGE value="list tag fix" />
-    <MESSAGE value="random_byte exchanged with uniqueid" />
-    <MESSAGE value="inputs styled." />
-    <MESSAGE value="sidebar div" />
-    <option name="LAST_COMMIT_MESSAGE" value="sidebar div" />
+    <MESSAGE value="Template: fix checking links extension." />
+    <MESSAGE value="css: ads placing" />
+    <option name="LAST_COMMIT_MESSAGE" value="css: ads placing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -590,207 +429,17 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/csprng/CSPRNG.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/notes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Templates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <marker date="1500897833562" expanded="true" signature="199:897" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="336:882" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="373:565" ph="..." />
-            <marker date="1500897833562" expanded="false" signature="653:664" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2909:3094" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2934:2947" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3115:3200" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3375:3560" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3400:3413" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3581:3666" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3876:4077" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3905:3918" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="4102:4191" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Templates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <marker date="1500897833562" expanded="true" signature="199:897" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="336:882" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="373:565" ph="..." />
-            <marker date="1500897833562" expanded="false" signature="653:664" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2909:3094" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2934:2947" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3115:3200" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3375:3560" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3400:3413" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3581:3666" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3876:4077" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3905:3918" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="4102:4191" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Templates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <marker date="1500897833562" expanded="true" signature="199:897" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="336:882" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="373:565" ph="..." />
-            <marker date="1500897833562" expanded="false" signature="653:664" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2909:3094" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2934:2947" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3115:3200" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3375:3560" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3400:3413" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3581:3666" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3876:4077" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3905:3918" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="4102:4191" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Templates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="41" />
-          <folding>
-            <marker date="1500897833562" expanded="true" signature="199:897" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="336:882" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="373:565" ph="..." />
-            <marker date="1500897833562" expanded="false" signature="653:664" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2909:3094" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2934:2947" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3115:3200" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3375:3560" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3400:3413" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3581:3666" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3876:4077" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3905:3918" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="4102:4191" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="46" column="43" lean-forward="false" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/notes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/asset/class/Notes.php" />
     <entry file="file://$PROJECT_DIR$/asset/index.php" />
     <entry file="file://$PROJECT_DIR$/asset/class/Notes.php" />
     <entry file="file://$PROJECT_DIR$/asset/index.php" />
     <entry file="file://$PROJECT_DIR$/asset/class/Notes.php" />
+    <entry file="file://$PROJECT_DIR$/notes.json" />
     <entry file="file://$PROJECT_DIR$/asset/notes.json" />
     <entry file="file://$PROJECT_DIR$/asset/class/Notes.php" />
     <entry file="file://$PROJECT_DIR$/asset/class/Templates.php" />
@@ -799,104 +448,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="649" column="9" lean-forward="false" selection-start-line="649" selection-start-column="9" selection-end-line="649" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/notes.json" />
-    <entry file="file://$PROJECT_DIR$/src/js/notes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../frontend_angular/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="790" column="80" lean-forward="false" selection-start-line="790" selection-start-column="80" selection-end-line="790" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="181" column="59" lean-forward="false" selection-start-line="181" selection-start-column="59" selection-end-line="181" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/notes.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/csprng/CSPRNG.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/class/Notes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+        <state relative-caret-position="697">
+          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/notes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dycf.html" />
+    <entry file="file://$PROJECT_DIR$/src/media/favicon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/class/Templates.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <marker date="1500897833562" expanded="true" signature="199:897" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="336:882" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="373:565" ph="..." />
-            <marker date="1500897833562" expanded="false" signature="653:664" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2909:3094" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="2934:2947" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3115:3200" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3375:3560" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3400:3413" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3581:3666" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3876:4077" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="3905:3918" ph="..." />
-            <marker date="1500897833562" expanded="true" signature="4102:4191" ph="..." />
-          </folding>
+        <state relative-caret-position="-781">
+          <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="164">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/notes.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="86" column="14" lean-forward="false" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
           <folding />
         </state>
       </provider>

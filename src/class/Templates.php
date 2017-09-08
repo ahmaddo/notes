@@ -55,6 +55,7 @@ class Templates
         return $notesList;
     }
 
+    //TODO refactor
     static private function handelLinks($loadedNote)
     {
         if (substr($loadedNote['content'], 0, 6) == 'upload' ) {
@@ -66,16 +67,36 @@ class Templates
                 }
             }
         } else {
-            return self::getLinkTemplate($loadedNote['content'])  ;
+            $multipleLinesLinks = self::hasMultipleLines($loadedNote['content']);
+            if (count($multipleLinesLinks) > 1) {
+                $links = '';
+                foreach ($multipleLinesLinks as $link) {
+                    $loadedNote['content'] = $link;
+                     $links .= self::handelLinks($loadedNote). '<br />';
+                }
+                return $links;
+            }
+
+            return self::getLinkTemplate($loadedNote['content'], null, '')  ;
         }
         return '';
     }
 
-    static public function getLinkTemplate($link, $innerText = null)
+    static public function hasMultipleLines($links)
+    {
+        $links = explode('<br />', $links);
+        if (is_array($links)) {
+            return $links;
+        }
+
+        return false;
+    }
+
+    static public function getLinkTemplate($link, $innerText = null, $preDir =  Notes::UPLOAD_DIR . '/' )
     {
         if (!$innerText) {
             $link = self::reformatFileTitle($link);
-            return '<a href="'. Notes::UPLOAD_DIR . '/' . $link.'" target="_blank">'.$link.'</a>';
+            return '<a href="' . $preDir . $link.'" target="_blank">'.$link.'</a>';
         }
         return '<a href="'.$link.'" target="_blank">'. $innerText .'</a>';
     }

@@ -75,7 +75,7 @@ class Templates
     {
         if (!$innerText) {
             $link = self::reformatFileTitle($link);
-            return '<a href="'.$link.'" target="_blank">'.$link.'</a>';
+            return '<a href="'. Notes::UPLOAD_DIR . '/' . $link.'" target="_blank">'.$link.'</a>';
         }
         return '<a href="'.$link.'" target="_blank">'. $innerText .'</a>';
     }

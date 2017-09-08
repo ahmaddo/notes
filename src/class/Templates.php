@@ -82,7 +82,12 @@ class Templates
 
     static public function reformatFileTitle($link)
     {
-        return substr($link, 7);
+        $dirs = explode('/', $link);
+        if ($dirs[0] == Notes::UPLOAD_DIR){
+            return substr($link, 7);
+        }
+
+        return $link;
     }
 
     static public function getImageTemplate($link)

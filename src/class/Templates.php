@@ -74,9 +74,15 @@ class Templates
     static public function getLinkTemplate($link, $innerText = null)
     {
         if (!$innerText) {
+            $links = self::reformatFileTitle($link);
             return '<a href="'.$link.'" target="_blank">'.$link.'</a>';
         }
         return '<a href="'.$link.'" target="_blank">'. $innerText .'</a>';
+    }
+
+    static public function reformatFileTitle($link)
+    {
+        return substr($link, 7);
     }
 
     static public function getImageTemplate($link)

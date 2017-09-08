@@ -41,20 +41,28 @@ class Notes
     public function postData($notes)
     {
         if ($_FILES['fileselect']['size'][0] > 0) {
-            $this->uploadFile();
+            $this->uploadFile($notes);
         } else {
             $this->addNote($notes);
         }
     }
 
-    private function uploadFile()
+    private function uploadFile($notes)
     {
+        $subDir = $notes['content'] ? $notes['content'] : date('Y-m-d');
+
         if (!is_dir(self::UPLOAD_DIR)) {
             $this->makeDir();
         }
+
+        if (!is_dir(self::UPLOAD_DIR.'/'.$subDir)) {
+            $this->makeDir($subDir);
+        }
+
+
         $files = $_FILES['fileselect'];
         foreach ($files['name'] as $fileNumber => $fileName){
-            $fileName =  self::UPLOAD_DIR ."/". $fileName;
+            $fileName =  self::UPLOAD_DIR ."/".$subDir . '/'. $fileName;
             move_uploaded_file($files['tmp_name'][$fileNumber], $fileName);
             $this->givePermission($fileName);
             $note['content'] = $fileName;
@@ -63,9 +71,13 @@ class Notes
         }
     }
 
-    private function makeDir()
+    private function makeDir($dir = '')
     {
-        mkdir(self::UPLOAD_DIR, 0755);
+        try{
+            mkdir(self::UPLOAD_DIR . '/' . $dir, 0755);
+        } catch (\Exception $e ) {
+            $e->getMessage();
+        }
     }
 
     private function givePermission($fileName)

@@ -35,7 +35,9 @@ class Notes
 
     private function sortAllNotesDESC()
     {
-        krsort($this->allNotes['notes']);
+        if ($this->allNotes['notes']){
+            krsort($this->allNotes['notes']);
+        }
     }
 
     public function postData($notes)
